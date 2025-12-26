@@ -1,0 +1,9 @@
+.PHONY:ALL clean
+ALL:Service Client
+Service:Service.cc
+	g++ -o $@ $^ -std=c++11
+Client:Client.cc
+	g++ -o $@ $^ -std=c++11
+clean:
+	rm -f Service Client fifo
+
